@@ -22,7 +22,7 @@ release:
     - git clone https://github.com/christianTragesser/fakos.git
     - helm package ./docker-poc_app/helm/poc-app
     - helm package ./fakos/helm/fakos
-    - mv /tmp/payload/*.tar.gz $CI_PROJECT_DIR/docker/helm/
+    - mv /tmp/payload/*.tgz $CI_PROJECT_DIR/docker/helm/
     - helm repo index $CI_PROJECT_DIR/docker/helm/
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker build -t $LOCAL_TAG -f $CI_PROJECT_DIR/docker/Dockerfile $CI_PROJECT_DIR/docker
