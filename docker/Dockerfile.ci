@@ -1,0 +1,6 @@
+FROM docker:latest
+
+RUN apk add git curl tar --no-cache && \
+  mkdir /opt/helm && \
+  curl https://get.helm.sh/helm-v3.0.0-linux-amd64.tar.gz | tar -zx -C /opt/helm/ && \
+  ln -s /opt/helm/linux-amd64/helm /usr/local/bin/helm
