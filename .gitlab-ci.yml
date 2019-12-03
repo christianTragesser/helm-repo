@@ -2,7 +2,7 @@ image: registry.gitlab.com/christiantragesser/helm-repo:ci
 
 variables:
     DOCKER_DRIVER: overlay2
-    DOCKER_HOST: tcp://localhost:2375
+    DOCKER_HOST: tcp://docker:2375
     DOCKER_TLS_CERTDIR: ""
     LOCAL_TAG: local/helm-repo
     EXT_TAG: $CI_REGISTRY/christiantragesser/helm-repo
